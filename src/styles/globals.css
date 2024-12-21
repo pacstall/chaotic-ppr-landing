@@ -6,3 +6,35 @@ body {
   background-color: #1A202C;
   color: white;
 }
+
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  src: url("NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 700;
+  src: url("NotoSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrains Mono";
+  font-weight: 400;
+  src: url("JetbrainsMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrains Mono";
+  font-weight: 700;
+  src: url("JetbrainsMono-Bold.ttf") format("truetype");
+}
+
+p, h1, h2, h3, h4, hr, td, tr, ul, ol, li, a, footer, article, main {
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+code, pre, .download {
+  font-family: "Jetbrains Mono", monospace !important;
+}

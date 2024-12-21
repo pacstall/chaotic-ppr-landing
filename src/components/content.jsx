@@ -1,11 +1,30 @@
 // Imports
 import React from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 // Content Component
 function Content() {
+    // Copy alert state
+    const [copiedAlert, setCopiedAlert] = useState(false);
+    // Download link
+    const downloadLink = "sudo bash -c \"$(curl -fsSL https://pacstall.dev/q/install)\"";
+    // Copy download function
+    const copyDownload = () => {
+        navigator.clipboard.writeText(downloadLink);
+        setCopiedAlert(true);
+        setTimeout(() => { // Hides alert after 5 secs. 
+            setCopiedAlert(false);
+        }, 5000);
+    }
+    // Display content
     return(
         <div className="lg:w-[80%] md:w-[90%] w-full p-4 mx-auto my-4">
+            {copiedAlert && (
+                <div className="fixed bottom-0 left-50 right-0 m-4 rounded-lg bg-pacstall-green p-4 text-white text-center">
+                    <h1 className="text-2xl font-bold">Copied to clipboard!</h1>
+                </div>
+            )}
                 <div className="flex justify-center items-center">
                     <Image 
                         src="/logo.png" 
@@ -22,7 +41,7 @@ function Content() {
             </div>
             <div className="my-8">
                 <h1 className="text-3xl text-white font-bold text-center">Installation instructions:</h1>
-                <div className="bg-darker p-4 my-8 rounded-lg w-auto">
+                <div className="bg-darker p-4 my-8 rounded-lg w-auto hover:cursor-pointer download" onClick={copyDownload}>
                     <h1 className="text-2xl text-pacstall-green font-bold text-center">
                         <span className="text-pacstall-pink">$</span> sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
                     </h1>
