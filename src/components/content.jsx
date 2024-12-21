@@ -41,8 +41,8 @@ function Content() {
             </div>
             <div className="my-8">
                 <h1 className="text-3xl text-white font-bold text-center">Installation instructions:</h1>
-                <div className="bg-darker p-4 my-8 rounded-lg w-auto hover:cursor-pointer download" onClick={copyDownload}>
-                    <h1 className="text-2xl text-pacstall-green font-bold text-center">
+                <div className="bg-darker p-4 my-8 rounded-lg w-auto hover:cursor-pointer" onClick={copyDownload}>
+                    <h1 className="text-2xl text-pacstall-green font-bold text-center download">
                         <span className="text-pacstall-pink">$</span> sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
                     </h1>
                 </div>
