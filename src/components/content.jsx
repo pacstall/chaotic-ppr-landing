@@ -8,7 +8,7 @@ function Content() {
     // Copy alert state
     const [copiedAlert, setCopiedAlert] = useState(false);
     // Download link
-    const downloadLink = "sudo bash -c \"$(curl -fsSL https://pacstall.dev/q/install)\"";
+    const downloadLink = "curl -s https://pacstall.dev/q/ppr | bash";
     // Copy download function
     const copyDownload = () => {
         navigator.clipboard.writeText(downloadLink);
@@ -37,14 +37,14 @@ function Content() {
             <div className="my-8">
                 <h1 className="text-center text-3xl text-white font-bold">What is the Chaotic PPR?</h1>
                 <p className="text-xl text-white my-8">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec dictum turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris lacus eros, mollis id bibendum sed, semper vitae ligula. Pellentesque nibh lacus, ultrices vel finibus aliquet, pellentesque ac nisl. Donec quis porta massa. Cras tempus mattis mi vitae vestibulum. Duis semper lobortis nulla, ut sollicitudin neque suscipit eu. Morbi vitae felis in nulla interdum fringilla ac vitae felis. Fusce sit amet felis ut dolor blandit pretium. Donec imperdiet in ipsum at luctus. Nulla a enim vel ante consectetur dignissim. 
+                    The Chaotic PPR is a system where Pacstall builds debs from pacscripts and uploads them to an APT repository, meaning that you can enjoy prebuilt pacstall packages without the build times, and you can even use the Chaotic PPR without Pacstall installed!
                 </p>
             </div>
             <div className="my-8">
                 <h1 className="text-3xl text-white font-bold text-center">Installation instructions:</h1>
                 <div className="bg-darker p-4 my-8 rounded-lg w-auto hover:cursor-pointer" onClick={copyDownload}>
                     <h1 className="text-2xl text-pacstall-green font-bold text-center download">
-                        <span className="text-pacstall-pink">$</span> sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
+                        <span className="text-pacstall-pink">$</span> curl -s https://pacstall.dev/q/ppr | bash
                     </h1>
                 </div>
             </div>
