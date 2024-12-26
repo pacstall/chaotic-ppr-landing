@@ -23,6 +23,7 @@ function Content() {
             {copiedAlert && (
                 <div className="fixed bottom-0 left-50 right-0 m-4 rounded-lg bg-pacstall-green p-4 text-white text-center">
                     <h1 className="text-2xl font-bold">Copied to clipboard!</h1>
+                    <p>You can now paste this command into your terminal.</p>
                 </div>
             )}
                 <div className="flex justify-center items-center">
