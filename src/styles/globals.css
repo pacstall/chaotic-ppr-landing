@@ -22,13 +22,13 @@ body {
 @font-face {
   font-family: "Jetbrains Mono";
   font-weight: 400;
-  src: url("JetbrainsMono-Regular.ttf") format("truetype");
+  src: url("JetBrainsMono-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Jetbrains Mono";
   font-weight: 700;
-  src: url("JetbrainsMono-Bold.ttf") format("truetype");
+  src: url("JetBrainsMono-Bold.ttf") format("truetype");
 }
 
 p, h1, h2, h3, h4, hr, td, tr, ul, ol, li, a, footer, article, main {
