@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Chaotic PPR | Pacstall</title>
-        <meta name="description" content="The (chaotic) Pacstall Package Repository" />
+        <meta name="description" content="The Chaotic Pacstall Package Repository" />
         <meta name="darkreader-lock" />
         <meta name="theme-color" content="#169390" />
         <link rel="icon" href="/pacstall.svg" />
