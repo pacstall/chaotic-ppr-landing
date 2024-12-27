@@ -4,11 +4,10 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 // Content Component
-function Content() {
+function Content({downloadLink}) {
     // Copy alert state
     const [copiedAlert, setCopiedAlert] = useState(false);
-    // Download link
-    const downloadLink = "curl -s https://pacstall.dev/q/ppr | bash";
+
     // Copy download function
     const copyDownload = () => {
         navigator.clipboard.writeText(downloadLink);
@@ -17,8 +16,9 @@ function Content() {
             setCopiedAlert(false);
         }, 5000);
     }
+
     // Display content
-    return(
+    return (
         <div className="lg:w-[80%] md:w-[90%] w-full p-4 mx-auto my-4">
             {copiedAlert && (
                 <div className="fixed bottom-0 left-50 right-0 m-4 rounded-lg bg-pacstall-green p-4 text-white text-center">
@@ -44,7 +44,7 @@ function Content() {
                 <h1 className="text-3xl text-white font-bold text-center">Installation instructions:</h1>
                 <div className="bg-darker p-4 my-8 rounded-lg w-auto hover:cursor-pointer" onClick={copyDownload}>
                     <h1 className="text-2xl text-pacstall-green font-bold text-center download">
-                        <span className="text-pacstall-pink">$</span> curl -s https://pacstall.dev/q/ppr | bash
+                        <span className="text-pacstall-pink">$</span> {downloadLink}
                     </h1>
                 </div>
             </div>
