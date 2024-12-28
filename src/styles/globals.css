@@ -38,3 +38,38 @@ p, h1, h2, h3, h4, hr, td, tr, ul, ol, li, a, footer, article, main {
 code, pre, .download {
   font-family: "Jetbrains Mono", monospace !important;
 }
+
+.popup {
+  opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inst {
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.inst:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.inst:not(:disabled):active {
+  transform: translateY(.125rem);
+}
