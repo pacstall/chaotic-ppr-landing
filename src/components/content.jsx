@@ -39,7 +39,7 @@ function Content({downloadLink}) {
             <div className="my-8">
                 <h1 className="text-3xl text-white font-bold text-center">Installation instructions:</h1>
                 <div className="inst bg-darker hover:bg-opacity-90 p-4 my-8 rounded-lg w-auto hover:cursor-pointer" onClick={copyDownload}>
-                    <h1 className="text-2xl text-pacstall-green font-bold text-center download">
+                    <h1 className="sm:text-2xl text-lg text-pacstall-green font-bold text-center download">
                         <span className="text-pacstall-pink">$</span> {downloadLink}
                     </h1>
                 </div>
