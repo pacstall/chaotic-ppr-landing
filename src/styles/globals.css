@@ -2,20 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1A202C;
+  color: white;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  src: url("NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 700;
+  src: url("NotoSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrains Mono";
+  font-weight: 400;
+  src: url("JetBrainsMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jetbrains Mono";
+  font-weight: 700;
+  src: url("JetBrainsMono-Bold.ttf") format("truetype");
+}
+
+p, h1, h2, h3, h4, hr, td, tr, ul, ol, li, a, footer, article, main {
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+code, pre, .download {
+  font-family: "Jetbrains Mono", monospace !important;
+}
+
+.popup {
+  opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inst {
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.inst:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.inst:not(:disabled):active {
+  transform: translateY(.125rem);
 }
