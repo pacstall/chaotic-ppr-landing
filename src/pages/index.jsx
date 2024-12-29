@@ -13,7 +13,7 @@ export default function Home({downloadLink}) {
 }
 
 export async function getStaticProps() {
-    const downloadLink = "curl -s https://pacstall.dev/q/ppr | bash";
+    const downloadLink = 'bash -c "$(curl -fsSL https://pacstall.dev/q/ppr)"';
     return {
         props: {
             downloadLink,
